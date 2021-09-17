@@ -14,11 +14,15 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
-      - run: echo Atma 
+      - run: echo Atma
+  test:
+    steps:
+      -run: echo Tania 
           
 workflows:
   build_test:
     jobs:
       - build
+      - test
 
 
