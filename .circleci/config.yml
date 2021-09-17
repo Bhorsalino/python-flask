@@ -3,12 +3,6 @@ version: 2.1
 orbs:
   python: circleci/python@1.2
 
-workflows:
-  build_test:
-    jobs:
-      - run-tests
-
-
 jobs:
   run-tests:
     docker:
@@ -25,4 +19,8 @@ jobs:
         name: Run tests
         command: echo 'This is a test'
           
+workflows:
+  build_test:
+    jobs:
+      - run-tests
 
