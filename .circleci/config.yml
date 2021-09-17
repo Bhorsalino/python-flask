@@ -14,11 +14,7 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
-      - run:
-        name: Download
-        command: echo Atma 
-            
-          
+      - run: echo Atma 
           
 workflows:
   build_test:
