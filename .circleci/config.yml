@@ -16,8 +16,8 @@ jobs:
           path: test-results
       - run:
         name: Download
-        command: |
-            echo Atma
+        command: echo Atma 
+            
           
           
 workflows:
