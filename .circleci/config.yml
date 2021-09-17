@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - command: |
-        echo 'export PATH=~PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
+        echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
         pip install --user -r requirements.txt
       - run:
         name: Run tests
