@@ -1,5 +1,10 @@
 version: 2.1
 
+parameters:
+  project-name:
+    type: string
+    default: 'python-flask'
+
 orbs:
   python: circleci/python@1.2
 
@@ -15,10 +20,12 @@ jobs:
       - image: cimg/python:3.8
     steps:
       - checkout
-      - command: |
-        virtualenv ./.venv
-        . .venv/bin/activate
-        pip install --user -r requirements.txt
+      - run:
+        name: Install python dependencies
+        command: |
+          virtualenv ./.venv
+          . .venv/bin/activate
+          pip install --user -r requirements.txt
       - run:
         name: Run tests
         command: |
