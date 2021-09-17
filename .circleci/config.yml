@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
         name: Install python dependencies
-        command: echo 'Papas' 
+        command: echo "Papas" 
           
           
 workflows:
