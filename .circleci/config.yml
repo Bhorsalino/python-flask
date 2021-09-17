@@ -1,7 +1,7 @@
 version: 2.1
 
 jobs:
-  tests:
+  build:
     docker:
       - image: cimg/python:3.8
     steps:
@@ -9,14 +9,16 @@ jobs:
       - run: virtualenv ./.venv
       - run: . .venv/bin/activate
       - run: pip install -r requirements.txt
-      - run:
-        name: Download
-        command: |
-          echo "Donas" 
+       
+  test:
+    steps:
+      - run: echo "Donas"
+        
           
           
 workflows:
   build_test:
     jobs:
-      - tests
+      - build
+      - test
 
