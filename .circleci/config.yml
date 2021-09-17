@@ -8,10 +8,8 @@ jobs:
       - checkout
       - run:
         name: Install python dependencies
-        command: |
-          virtualenv ./.venv
-          . .venv/bin/activate
-          pip install -r requirements.txt
+        command: echo 'Papas' 
+          
           
 workflows:
   build_test:
