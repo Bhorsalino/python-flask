@@ -22,7 +22,8 @@ jobs:
       - run: echo Atma
       - run:
         name: Download
-        command: echo "Papas" 
+        command: |
+          echo Papas 
         
           
 workflows:
