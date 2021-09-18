@@ -21,6 +21,7 @@ jobs:
       - checkout
       - run: echo Atma
       - run: pip install flake8
+      - run: flake8 hello_world.py
           
 workflows:
   build_test:
