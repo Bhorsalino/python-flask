@@ -22,12 +22,16 @@ jobs:
       - run: echo Atma
       - run: pip install flake8
       - run: flake8 hello_world.py
+  lint:
+    steps:
+      - run: black --check .
           
 workflows:
   build_test:
     jobs:
       - build
       - test
+      - lint
     
 
 
