@@ -26,7 +26,8 @@ jobs:
       - image: circleci/python:3.8
     steps:
       - checkout
-      - run: echo black
+      - run: pip install flake8
+      - run: flake8 hello_world.py
           
 workflows:
   build_test:
