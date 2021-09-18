@@ -1,11 +1,6 @@
 version: 2.1
 
 jobs:
-  builder:
-    executor:
-      name: aws-ecr/default
-      use-docker-layer-caching: true
-
   build:
     docker:
       - image: circleci/python:3.8
