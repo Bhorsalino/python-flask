@@ -9,7 +9,7 @@ def generate_html(message):
         <html>
         <body>
             <div style='text-align:center;font-size:80px;'>
-                <image height="340" width="1200" src="https://user-images.githubusercontent.png">
+                <image height="340" width="1200" src="https://user-image.png">
                 <br> {0}
                 <p>Version Number: {1}</p>
                 <br>
