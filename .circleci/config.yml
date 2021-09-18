@@ -14,15 +14,14 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
-  test:
+  lint:
     docker:
       - image: circleci/python:3.8
     steps:
       - checkout
-      - run: echo Atma
       - run: pip install flake8-black
-      - run: flake8 hello_world.py
-  lint:
+      - run: black --check .
+  test:
     docker:
       - image: circleci/python:3.8
     steps:
