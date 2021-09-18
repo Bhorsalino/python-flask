@@ -20,8 +20,7 @@ jobs:
     steps:
       - checkout
       - run: echo Atma
-      - run: pip install pylint
-        
+      - run: pip install flake8
           
 workflows:
   build_test:
