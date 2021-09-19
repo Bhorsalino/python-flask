@@ -29,7 +29,18 @@ jobs:
       - checkout
       - run: pip install flake8
       - run: flake8 hello_world.py
-          
+
+  format:
+    docker:
+      - image: circleci/python:3.8
+      steps:
+        - checkout
+        - run:
+            name: Download
+            command: echo Python
+
+
+
 workflows:
   build_test:
     jobs:
