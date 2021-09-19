@@ -39,15 +39,13 @@ jobs:
           name: Download
           command: echo Python
 
-
-
-
 workflows:
   build_test:
     jobs:
       - build
       - test
       - lint
+      - format
     
 
 
