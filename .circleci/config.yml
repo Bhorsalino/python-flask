@@ -36,8 +36,13 @@ jobs:
     steps:
       -  checkout
       - run:
+          name: Install package
+          command: |
+            pip install pre-commit
+      - run:
           name: Download
           command: echo Python
+
 
 workflows:
   build_test:
