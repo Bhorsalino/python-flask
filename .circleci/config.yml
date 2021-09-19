@@ -33,11 +33,12 @@ jobs:
   format:
     docker:
       - image: circleci/python:3.8
-      steps:
-        - checkout
-        - run:
-            name: Download
-            command: echo Python
+    steps:
+      -  checkout
+      - run:
+          name: Download
+          command: echo Python
+
 
 
 
