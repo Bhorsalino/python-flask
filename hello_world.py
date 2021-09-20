@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 def generate_html(message):
-    version_number = '0001'
+    version_number = "0001"
     html = """
         <html>
         <body>
@@ -15,20 +15,22 @@ def generate_html(message):
                 <br>
             </div>
         </body>
-        </html>""".format(message, version_number)
+        </html>""".format(
+        message, version_number
+    )
     return html
 
 
 def greet():
-    greeting = 'Welcome to CI/CD'
+    greeting = "Welcome to CI/CD"
     return greeting
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
     html = generate_html(greet())
     return html
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
